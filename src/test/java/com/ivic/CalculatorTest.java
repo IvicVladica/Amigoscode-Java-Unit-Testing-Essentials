@@ -15,6 +15,15 @@ public class CalculatorTest {
     }
 
     @Test
+    void canAddNegativeNumbers() {
+        Calculator underTest = new Calculator();
+        int number1 = -10;
+        int number2 = -20;
+        int result = underTest.add(number1, number2);
+        assertEquals(-30, result);
+    }
+
+    @Test
     void canHandleWhenInputIsZero() {
         Calculator underTest = new Calculator();
         int result = underTest.add(0);
@@ -28,5 +37,6 @@ public class CalculatorTest {
         var result = underTest.add(numbers);
         assertEquals(9, result);
     }
+
 }
  
