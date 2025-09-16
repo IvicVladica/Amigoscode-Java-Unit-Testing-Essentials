@@ -13,5 +13,20 @@ public class CalculatorTest {
         int result = underTest.add(number1, number2);
         assertEquals(30, result);
     }
+
+    @Test
+    void canHandleWhenInputIsZero() {
+        Calculator underTest = new Calculator();
+        int result = underTest.add(0);
+        assertEquals(0, result);
+    }
+
+    @Test
+    void canAddNumbersFromgivenArray() {
+        Calculator underTest = new Calculator();
+        var numbers = new int[]{1, 3, 5};
+        var result = underTest.add(numbers);
+        assertEquals(9, result);
+    }
 }
  
